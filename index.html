@@ -1,60 +1,339 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- <head>
- <title>Teste Ads</title>
- </head>
- <style>
-  .divv {
-   width: 100%;
-   height: 200px;
-   display: flex;
-   justify-content: center;
-   background-color: orange;
-   border: 1px solid #fff;
-   border-radius: 15px
-  }
 
-  .divv p {
-   text-align: center;
-   color: blue;
-   font-size: 30px;
-   aligin-self: center;
-  }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Página Inicial - ADS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="imagens/logo_pading.svg">
 
-  .inp {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-  }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
-  .inp input {
-   width: 200px;
-   height: 35px;
-   border-radius: 10px;
-  }
+    <svg class="bi bi-exclamation-triangle text-success" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"></svg>
 
-  .inp button {
-   height: 35px;
-  }
- </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
- <body>
-  <div class="divv"> <p>Olá Mundo</p></div>
-   <div class="inp">
-    <input type="text" placeholder="Digite..." id="pesq">
-    <button onclick="clicar()">Enviar</button>
-   </div>
-  <p id="p"></p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
-  <script>
-   function clicar() {
-    const input = document.getElementById("pesq");
-    const p = document.getElementById("p");
+<body>
+    <main>
+        <header class="cabecalho">
 
-    alert('Você digitou: '+ input);
-   }
-  </script>
-  
- </body>
+            <div class="cab1">
+                <div class="ads">
+                    <a href="index.html"><img class="adss" src="imagens/logo_ads.svg" alt=""></a>
+                </div>
+                <div class="elements_list" id="lista">
+                    <ul class="nao_ordenada">
+                        <li class="list_itens"><a class="inicio_text" href="index.html">Início</a></li>
+                        <li class="list_itens"><a href="SubPaginas/noticias.html">Notícias</a></li>
+                        <li class="list_itens"><a href="/SubPaginas/sobre.html">Sobre</a></li>
+                        <li class="list_itens"><a href="/SubPaginas/atletica.html">Atlética</a></li>
+                        <li class="list_itens"><a target="_blank" rel="sternal"
+                                href="https://serradocarmo.edu.br">Fasec</a></li>
+                    </ul>
+                </div>
+                <div class="input_d" id="inputd">
+                    <form action="" class="form_input" onclick="inp_variavel()">
+                        <input oninput="acionar_input()" id="input_alternativo1" type="text" placeholder="Buscar..." name="meuInput">
+                        <div onclick="limp_text()" class="excluir-x" id="limp_text">
+                            <i class="bi bi-x">
+                            </i>
+                        </div>
+                        <button type="submit" onclick="buscar(event)">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+
+        </header>
+
+        <button onclick="click_menu()" class="mobile-menu"><img src="imagens/icon_menu.png" alt="menu"></button>
+
+        <div class="search_lg" onclick="inp_variavel2()">
+            <i class="fas fa-search"></i>
+        </div>
+
+
+
+        <div class="list_cell">
+            <nav>
+                <ul class="nav_list" id="nav_list">
+                    <div class="closee" onclick="click_menu()">
+                        <i class="bi bi-x"></i>
+                    </div>
+
+                    <li><a onclick="click_menu()" href="index.html">Início</a></li>
+                    <li><a onclick="click_menu()" href="SubPaginas/noticias.html">Notícias</a></li>
+                    <li><a onclick="click_menu()" href="SubPaginas/sobre.html">Sobre</a></li>
+                    <li><a onclick="click_menu()" href="SubPaginas/atletica.html">Atlética</a></li>
+                    <li><a onclick="click_menu()" target="_blank" rel="sternal"
+                            href="https://serradocarmo.edu.br">Fasec</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+        <div class="menu-background" id="menuBackground" onclick="click_menu()"></div>
+
+        <div class="carousel">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-slide">
+                <div class="carousel-item">
+                    <a href="SubPaginas/atletica.html"><img src="imagens/Ads - Fasec 3.png" alt="Imagem 3">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="SubPaginas/noticias.html"><img src="imagens/Ads - Fasec 1.png" alt="Imagem 1">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="SubPaginas/sobre.html"><img src="imagens/Ads - Fasec 2.png" alt="Imagem 2">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="SubPaginas/atletica.html"><img src="imagens/Ads - Fasec 3.png" alt="Imagem 3">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#"><img src="imagens/Ads - Fasec 1.png" alt="Imagem 1">
+                    </a>
+                </div>
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="carousel-indicators">
+                <span class="dot" onclick="moveSlideTo(0)"></span>
+                <span class="dot" onclick="moveSlideTo(1)"></span>
+                <span class="dot" onclick="moveSlideTo(2)"></span>
+            </div>
+        </div>
+
+        <section class="Grade_curricular">
+
+            <div data-aos="zoom-in" class="infor_curso">
+
+                <div class="dv_info">
+                    <h3>Informações</h3>
+                </div>
+
+                <div class="in2">
+                    <div>
+                        <i class="bi bi-mortarboard"></i>
+                        <p>Grau Tecnólogo</p>
+                    </div>
+                    <div>
+                        <i class="bi bi-calendar-week"></i>
+                        <p>Duração: 6 Semestres</p>
+                    </div>
+                    <div>
+                        <i class="bi bi-person-arms-up"></i>
+                        <p>100% Presencial</p>
+                    </div>
+                    <div>
+                        <i class="bi bi-clock-history"></i>
+                        <p>Carga Horária: 2.160 Horas</p>
+                    </div>
+                    <div>
+                        <i class="bi bi-moon-stars-fill"></i>
+                        <p>Turno: Noturno</p>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div data-aos="zoom-in" class="grade-prin">
+
+                <div class="matriz_curricular">
+                    <p>Matriz Curricular</p>
+                </div>
+                <div class="bols">
+                    <div id="set1" class="bol_per active"><i class="bi bi-caret-right-fill"></i></div>
+                    <div id="set2" class="bol_per"><i class="bi bi-caret-right-fill"></i></div>
+                    <div id="set3" class="bol_per"><i class="bi bi-caret-right-fill"></i></div>
+                    <div id="set4" class="bol_per"><i class="bi bi-caret-right-fill"></i></div>
+                    <div id="set5" class="bol_per"><i class="bi bi-caret-right-fill"></i></div>
+                    <div id="set6" class="bol_per"><i class="bi bi-caret-right-fill"></i></div>
+                </div>
+
+                <div class="periodos">
+                    <div id="p1" class="div-style cor1" onclick="toggleColor('p1')"><p>1&ordm; Período</p></div>
+                    <div id="p2" class="div-style cor2" onclick="toggleColor('p2')"><p>2&ordm; Período</p></div>
+                    <div id="p3" class="div-style cor2" onclick="toggleColor('p3')"><p>3&ordm; Período</p></div>
+                    <div id="p4" class="div-style cor2" onclick="toggleColor('p4')"><p>4&ordm; Período</p></div>
+                    <div id="p5" class="div-style cor2" onclick="toggleColor('p5')"><p>5&ordm; Período</p></div>
+                    <div id="p6" class="div-style cor2" onclick="toggleColor('p6')"><p>6&ordm; Período</p></div>
+                </div>
+
+                <div class="info_geral">
+                    <div class="info-grade1" id="periodo1">
+                        <ul type="disc">
+                            <li>&bull; Língua Portuguesa</li>
+                            <li>&bull; Metodologia Científica</li>
+                            <li>&bull; Fundamentos de Sistema de Informação</li>
+                            <li>&bull; Inovação Tecnológica e Empreendedorismo</li>
+                            <li>&bull; Comportamento Humano e Plano de Carreira</li>
+                            <li>&bull; Introdução a Lógica de Programação</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-grade2" id="periodo2">
+                        <ul type="disc">
+                            <li>&bull; Organização e Arq. de Computadores</li>
+                            <li>&bull; Desenvolvimento Front End</li>
+                            <li>&bull; Matemática Básica</li>
+                            <li>&bull; Matemática Aplicada à Computação</li>
+                            <li>&bull; IHC (Interface Humano-Computador)</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-grade3" id="periodo3">
+                        <ul type="disc">
+                            <li>&bull; Linguagem de Programação</li>
+                            <li>&bull; Programação Orientada a Objetos</li>
+                            <li>&bull; Sistemas Operacionais</li>
+                            <li>&bull; Projetos Extensionistas II</li>
+                            <li>&bull; Redes de Computadores I</li>
+                        </ul>
+                    </div>
+                    <div class="info-grade4" id="periodo4">
+                        <ul type="disc">
+                            <li>&bull; Redes de Computadores II</li>
+                            <li>&bull; Estruturas de Dados</li>
+                            <li>&bull; Engenharia de Software I</li>
+                            <li>&bull; Governança de TI</li>
+                            <li>&bull; Banco de Dados I</li>
+                            <li>&bull; Projetos Extensionistas III</li>
+                        </ul>
+                    </div>
+                    <div class="info-grade5" id="periodo5">
+                        <ul type="disc">
+                            <li>&bull; Engenharia de Software II</li>
+                            <li>&bull; Inteligência Artificial</li>
+                            <li>&bull; Segurança da Informação</li>
+                            <li>&bull; Computação Orientada a Serviços</li>
+                            <li>&bull; Qualidade de Software</li>
+                            <li>&bull; Projetos Extensionistas IV</li>
+                        </ul>
+                    </div>
+                    <div class="info-grade6" id="periodo6">
+                        <ul>
+                            <li>&bull; Ética, Direito e Legislação</li>
+                            <li>&bull; Sistemas distribuídos</li>
+                            <li>&bull; Mineração de Dados</li>
+                            <li>&bull; Desenvolvimento de Sistemas p/ Web II</li>
+                            <li>&bull; Desenvolvimento de Sist. p/ Dispositivos Móveis</li>
+                            <li>&bull; LIBRAS – Optativa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section data-aos="zoom-in" class="conteudo">
+            <h1 class="titulo_principal">Análise e Desenvolvimento de Sistemas</h1>
+            <p>Nossa turma de ADS é formada por um grupo de estudantes dedicados e apaixonados pela tecnologia e
+                inovação. Juntos, estamos explorando os vastos campos da Análise e Desenvolvimento de Sistemas, sempre
+                em busca de novos conhecimentos e soluções criativas.</p>
+        </section>
+
+        <section data-aos="zoom-in" class="sobre">
+            <div data-aos="zoom-in" class="div_sobre">
+                <h2>Sobre Nós</h2>
+                <p>Nossa turma de ADS é formada por um grupo de estudantes dedicados e apaixonados pela tecnologia e
+                    inovação. Juntos, estamos explorando os vastos campos da Análise e Desenvolvimento de Sistemas,
+                    sempre em busca de novos conhecimentos e soluções criativas.</p>
+            </div>
+
+            <div data-aos="zoom-in" class="div_sobre">
+                <h2>Notícias</h2>
+                <p>Aqui você encontra as últimas notícias sobre nossa turma. Fique atualizado com os eventos,
+                    conquistas, e tudo mais que está acontecendo no mundo do ADS. Desde competições e premiações até
+                    novidades do mercado, este é o lugar para se informar.</p>
+            </div>
+
+            <div data-aos="zoom-in" class="div_sobre">
+                <h2>Eventos</h2>
+                <p>Nossos eventos são oportunidades incríveis para aprender, compartilhar conhecimento e fazer
+                    networking. Fique ligado nas próximas palestras, workshops, e hackathons que estão por vir.
+                    Participe e amplie seu horizonte profissional!</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer_top"></div>
+            <div class="div_rs">
+                <div class="sociais">
+                    <a target="_blank" rel="sternal" href="https://www.instagram.com/adsfasec?igsh=N3ByODZ1YzZ4c3V1"><i
+                            class="bi bi-instagram"></i></a>
+                </div>
+
+                <div class="sociais">
+                    <a target="_blank" rel="sternal" href="https://www.tiktok.com/@dev.fasec?_t=ZM-8u22hPylk5l&_r=1"><i
+                            class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+
+            <p><a href="#">Suporte</a> - <a href="#">Contato</a> - <a href="#">Informações</a></p>
+            <p class="footer_turma">Turma de Análise e Desenvolvimento de Sistemas - FASEC.</p>
+            <p class="copy">&copy; 2025 Todos os direitos reservados.</p>
+        </footer>
+
+        <div class="pesquisaa" id="pesquisaa">
+
+            <button class="voltar_set2" id="voltar_set" onclick="voltar2()">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+            
+            <div class="sec_pesquisaa" id="sec_pesquisa">
+                <div class="input_pesquisa">
+                    <form class="form_input2" id="form2">
+
+                        <input oninput="acionar_input2()" id="input_alternativo2" type="text" placeholder="Buscar...">
+                        <div onclick="limp_text2()" class="excluir-x2" id="limp_text2">
+                            <i class="bi bi-x">
+                            </i>
+                        </div>
+
+                        <button type="submit" onclick="buscar()" id="buscar2" class="hidden">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+            <section id="results" class="results">
+                <div>
+                    <h3>Ainda estamos trabalhando aqui!</h3>
+                    <div class="the_process_prin">
+                        <div class="the_process1"></div>
+                        <div class="the_process2"></div>
+                        <div class="the_process3"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
 </html>
