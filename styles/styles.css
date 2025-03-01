@@ -893,7 +893,7 @@
     }
 
     .grade-prin {
-        background-color: #80a0b7;
+        background-color: #95a8b67e;
         height: 250px;
         border: solid 2px #ffffff;
         margin-bottom: 20px;
@@ -928,7 +928,7 @@
     }
 
     .info_geral {
-        background-color: #365869;
+        background-color: #001c2b;
         border-radius: 0px 5px 5px 0px;
     }
 
@@ -939,19 +939,19 @@
         width: 55%;
         height: 245px;
         padding-left: 20px;
-        background-color: #365869;
+        background-color: #001c2b;
         margin-top: 2px;
     }
 
     .cor1 {
-        background-color: #365869;
-        color: #5a6462;
+        background-color: #001c2b;
+        color: #e0e0e03b;
         transition: background-color 01s ease, color 0.5s ease;
     }
 
     .cor2 {
-        background-color: #80a0b7;
-        color: #5a6462;
+        
+        color: #fcfcfc3b;
         transition: background-color 0.5s ease, color 0.5s ease;
     }
 
@@ -1079,7 +1079,7 @@
     }
 
     footer {
-        background-color: #070d22;
+        background-color: #03060f;
         height: 180px;
     }
 
@@ -1123,7 +1123,7 @@
     .footer_top {
         background: linear-gradient(90deg, #00ffd5, #006eff, #00ffd5);
         width: 100%;
-        height: 10px;
+        height: 5px;
         background-size: 200% 100%;
         animation: mov 6s linear infinite;
     }

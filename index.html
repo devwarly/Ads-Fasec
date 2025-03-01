@@ -45,18 +45,13 @@
 
 
                 </div>
-                <div class="input_d" id="inputd">
-                    <form action="" class="form_input" onclick="inp_variavel()">
-                        <input oninput="acionar_input()" id="input_alternativo1" type="text" placeholder="Buscar..."
-                            name="meuInput">
-                        <div onclick="limp_text()" class="excluir-x" id="limp_text">
-                            <i class="bi bi-x">
-                            </i>
-                        </div>
-                        <button type="submit" onclick="buscar(event)">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </form>
+                <div class="input_d" id="input_dd">
+                    <input type="text" id="input_alternativo1" placeholder="Buscar...">
+
+                    <button type="submit" id="buscar1" onclick="buscar()">
+                        <i class="fas fa-search"></i>
+                    </button>
+
                 </div>
             </div>
 
@@ -134,14 +129,17 @@
         <section class="sec001">
             <div data-aos="zoom-in">
                 <h2>Sobre Nós</h2>
-                <p>Bem-vindo ao site oficial da turma de Análise e Desenvolvimento de Sistemas (ADS) da <span><a
-                            class="fasec1" href="https://serradocarmo.edu.br">Faculdade Serra do Carmo.</a></span> Aqui,
+                <p>Bem-vindo ao site oficial da turma de Análise e Desenvolvimento de Sistemas (ADS) da <span><ins>
+                            <a class="fasec1" href="https://serradocarmo.edu.br">Faculdade Serra do Carmo.</a>
+                        </ins></span> Aqui,
                     celebramos o aprendizado, a inovação e o espírito colaborativo que definem nosso curso. Nossa turma
                     é composta por futuros desenvolvedores, analistas e visionários da tecnologia, comprometidos em
                     criar soluções impactantes para os desafios do mundo digital.</p>
             </div>
         </section>
+
         <div class="gradient001"></div>
+
         <section class="Grade_curricular">
 
             <div data-aos="zoom-in" class="infor_curso">
@@ -279,7 +277,9 @@
 
 
         <section data-aos="zoom-in" class="frases">
-            <div class="frases-title"><p>Scripts de Sucesso</p></div>
+            <div class="frases-title">
+                <p>Scripts de Sucesso</p>
+            </div>
             <div>
                 <strong>
                     <p class="banco_frases" id="frase-exibida">Carregando...</p>
@@ -293,24 +293,29 @@
 
                 <details class="details">
                     <summary><strong>O que é o curso de Análise e Desenvolvimento de Sistemas?</strong></summary>
-                    <p>É um curso focado no desenvolvimento e na gestão de softwares e sistemas computacionais. Os alunos aprendem a analisar demandas, projetar soluções tecnológicas e implementar sistemas funcionais.</p>
-              
+                    <p>É um curso focado no desenvolvimento e na gestão de softwares e sistemas computacionais. Os
+                        alunos aprendem a analisar demandas, projetar soluções tecnológicas e implementar sistemas
+                        funcionais.</p>
+
                 </details>
 
                 <details class="details">
                     <summary><strong>Quais são as principais disciplinas do curso?</strong></summary>
-                    <p>Geralmente inclui disciplinas como Algoritmos, Programação, Banco de Dados, Engenharia de Software, Redes de Computadores, e Segurança da Informação.</p>
+                    <p>Geralmente inclui disciplinas como Algoritmos, Programação, Banco de Dados, Engenharia de
+                        Software, Redes de Computadores, e Segurança da Informação.</p>
 
                 </details>
 
                 <details class="details">
                     <summary><strong>Quais habilidades eu vou desenvolver no curso?</strong></summary>
-                    <p>Você aprenderá habilidades técnicas, como programação e modelagem de sistemas, além de competências em análise crítica, trabalho em equipe e resolução de problemas.</p>
+                    <p>Você aprenderá habilidades técnicas, como programação e modelagem de sistemas, além de
+                        competências em análise crítica, trabalho em equipe e resolução de problemas.</p>
                 </details>
 
                 <details class="details">
                     <summary><strong>Preciso saber programar antes de começar o curso? </strong></summary>
-                    <p>Não é obrigatório, mas é útil. A maioria dos cursos começa com fundamentos de programação, então você poderá aprender do zero.</p>
+                    <p>Não é obrigatório, mas é útil. A maioria dos cursos começa com fundamentos de programação, então
+                        você poderá aprender do zero.</p>
                 </details>
 
                 <details class="details">
@@ -320,12 +325,14 @@
 
                 <details class="details">
                     <summary><strong>Quais são as possibilidades de atuação no mercado de trabalho?</strong></summary>
-                    <p>Após formado, você poderá trabalhar como desenvolvedor de software, analista de sistemas, gerente de TI, consultor tecnológico, empreendedor no setor entre outras.</p>
+                    <p>Após formado, você poderá trabalhar como desenvolvedor de software, analista de sistemas, gerente
+                        de TI, consultor tecnológico, empreendedor no setor entre outras.</p>
                 </details>
 
                 <details class="details">
                     <summary><strong>O mercado de trabalho é promissor?</strong></summary>
-                    <p>Sim! A área de tecnologia continua em crescimento, com alta demanda por profissionais qualificados, especialmente em desenvolvimento de sistemas</p>
+                    <p>Sim! A área de tecnologia continua em crescimento, com alta demanda por profissionais
+                        qualificados, especialmente em desenvolvimento de sistemas</p>
                 </details>
 
             </div>

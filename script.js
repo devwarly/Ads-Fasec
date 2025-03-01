@@ -83,6 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
     inputField.addEventListener("input", updateButtonVisibility);
 });
 
+
+
 function limp_text2() {
     const inputField = document.getElementById("input_alternativo2");
     inputField.value = "";
@@ -92,6 +94,27 @@ function limp_text2() {
 document.addEventListener("DOMContentLoaded", function () {
     const searchButton = document.getElementById("buscar2");
     const inputField = document.getElementById("input_alternativo2");
+
+    function executeSearch() {
+        alert("Infelizmente essa função ainda não está funcionando😉");
+    }
+
+    searchButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        executeSearch();
+    });
+
+    inputField.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            executeSearch();
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchButton = document.getElementById("buscar1");
+    const inputField = document.getElementById("input_alternativo1");
 
     function executeSearch() {
         alert("Infelizmente essa função ainda não está funcionando😉");
