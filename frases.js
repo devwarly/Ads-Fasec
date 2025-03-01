@@ -1,4 +1,3 @@
-
 const frases = [
     "Cada linha de código é um passo rumo ao futuro.",
     "Debugar é aprender; errar é evoluir.",
@@ -22,56 +21,13 @@ const frases = [
     "Confie em você, o código acompanha!"
 ];
 
+let index = 0;
+const fraseExibida = document.getElementById("frase-exibida");
 
-let indice = 0;
+function trocarFrase() {
+    fraseExibida.textContent = frases[index];
+    index = (index + 1) % frases.length;
+}
 
-const exibirFrase = () => {
-    const fraseElemento = document.querySelector('.banco_frases');
-    fraseElemento.textContent = frases[indice];
-    indice = (indice + 1) % frases.length;
-};
-
-setInterval(exibirFrase, 10000);
-
-exibirFrase();
-
-
-const request = indexedDB.open("FrasesDB", 1);
-
-request.onupgradeneeded = (event) => {
-    const db = event.target.result;
-    const store = db.createObjectStore("frases", { keyPath: "id", autoIncrement: true });
-
-    const frases = [
-        { texto: "Cada linha de código é um passo rumo ao futuro." },
-        { texto: "Debugar é aprender; errar é evoluir." },
-        { texto: "Transforme problemas em soluções criativas." },
-        { texto: "A lógica é sua maior aliada." },
-    ];
-    frases.forEach((frase) => store.add(frase));
-};
-
-request.onsuccess = (event) => {
-    const db = event.target.result;
-
-    const getFrases = () => {
-        return new Promise((resolve, reject) => {
-            const transaction = db.transaction("frases", "readonly");
-            const store = transaction.objectStore("frases");
-            const request = store.getAll();
-            request.onsuccess = () => resolve(request.result);
-            request.onerror = () => reject(request.error);
-        });
-    };
-
-    getFrases().then((frases) => {
-        let indice = 0;
-        const fraseElemento = document.querySelector('.banco_frases');
-        fraseElemento.textContent = frases[indice].texto;
-
-        setInterval(() => {
-            indice = (indice + 1) % frases.length;
-            fraseElemento.textContent = frases[indice].texto;
-        }, 10000);
-    });
-};
+setInterval(trocarFrase, 7000);
+trocarFrase();

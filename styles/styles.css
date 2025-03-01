@@ -957,7 +957,6 @@
 
     .div-style {
         cursor: pointer;
-        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -968,18 +967,46 @@
         margin-right: 20px;
         padding-left: 20px;
         padding-right: 20px;
-        height: 60px;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        height: 80px;
         border-radius: 5px;
         background-color: #03ffd51f;
+        border: solid 1px #00ffd5;
+        background-clip: padding-box;
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 18px;
+        background: linear-gradient(100deg, #00ffd5da, #0011ff,#00ffd5da);
+        background-size: 200% 100%;
+        animation: movi 6s linear infinite;
+    }
+
+    .frases-title {
+        position: absolute;
+        top: -20px;
+        width: 200px;
+        height: 30px;
+        background-color: #001c2b;
+        border: 1px solid #00ffd5;
+        border-radius: 5px
+    }
+    
+
+    @keyframes movi {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        100% {
+            background-position: 200% 50%;
+        }
     }
 
     .frases div p {
-        color: #00eeff;
+        color: #ffffff;
     }
 
 
@@ -1040,6 +1067,59 @@
         border: none;
         font-size: 17px;
     }
+
+    .perguntas001 {
+        background-color: #376e8bc4;
+        padding: 20px;
+    }
+
+    .perguntas001 div h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #00aeff;
+    }
+
+    .details {
+        border-bottom: 1px solid #ffffff3a;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .details div {
+        width: 100%;
+    }
+
+    .details summary strong {
+        color: #ffffff;
+        text-align: justify;
+    }
+
+    .details p {
+        color: #ffffff;
+        text-align: justify;
+        opacity: 0.8;
+        padding-top: 5px;
+    }
+
+    summary {
+        cursor: pointer;
+        text-align: justify;
+      }
+    
+      
+      summary::-webkit-details-marker {
+        display: none;
+      }
+    
+      summary::before {
+        content: "▶ ";
+        font-size: 15px;
+        color: #00f8d7;
+      }
+    
+      details[open] summary::before {
+        content: "▼ ";
+      }
 
     footer {
         background-color: #070d22;
