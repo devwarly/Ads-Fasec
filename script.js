@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     autoSlideInterval = setInterval(autoSlide, intervalTime);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const p1 = document.getElementById("p1");
     const p2 = document.getElementById("p2");
     const p3 = document.getElementById("p3");
@@ -249,14 +249,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const periodo5 = document.getElementById("periodo5");
     const periodo6 = document.getElementById("periodo6");
 
-    p1.addEventListener("click", function() {
+    p1.addEventListener("click", function () {
         p1.classList.add("active");
         p2.classList.remove("active");
         p3.classList.remove("active");
         p4.classList.remove("active");
         p5.classList.remove("active");
         p6.classList.remove("active");
-        
+
 
         periodo1.style.zIndex = 100;
         periodo2.style.zIndex = 1;
@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function() {
         periodo6.style.zIndex = 1;
     });
 
-    p2.addEventListener("click", function() {
+    p2.addEventListener("click", function () {
         p1.classList.remove("active");
         p2.classList.add("active");
         p3.classList.remove("active");
@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function() {
         periodo6.style.zIndex = 1;
     });
 
-    p3.addEventListener("click", function() {
+    p3.addEventListener("click", function () {
         p3.classList.add("active");
         p1.classList.remove("active");
         p2.classList.remove("active");
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
         periodo6.style.zIndex = 1;
     });
 
-    p4.addEventListener("click", function() {
+    p4.addEventListener("click", function () {
         p4.classList.add("active");
         p1.classList.remove("active");
         p2.classList.remove("active");
@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", function() {
         periodo6.style.zIndex = 1;
     });
 
-    p5.addEventListener("click", function() {
+    p5.addEventListener("click", function () {
         p5.classList.add("active");
         p1.classList.remove("active");
         p2.classList.remove("active");
@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function() {
         periodo6.style.zIndex = 1;
     });
 
-    p6.addEventListener("click", function() {
+    p6.addEventListener("click", function () {
         p6.classList.add("active");
         p1.classList.remove("active");
         p2.classList.remove("active");
@@ -343,12 +343,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function toggleColor(activeId) {
-   
+
     for (let i = 1; i <= 6; i++) {
         document.getElementById('p' + i).classList.add('cor2');
         document.getElementById('p' + i).classList.remove('cor1');
     }
-  
+
     document.getElementById(activeId).classList.add('cor1');
     document.getElementById(activeId).classList.remove('cor2');
 }
@@ -367,8 +367,15 @@ document.querySelector('.periodos').addEventListener('click', (event) => {
     }
 });
 
+document.querySelectorAll('[data-aos]').forEach(function(element) {
+    if (window.innerWidth >= 800) {
+        element.removeAttribute('data-aos'); // Remove o atributo data-aos para telas maiores
+    }
+});
+
+
 window.onload = function () {
     document.getElementById('nav_list').style.display = 'none';
     document.getElementById('menuBackground').style.display = 'none';
-    document.getElementById('menu_inp').style.display = 'none';
 }
+
