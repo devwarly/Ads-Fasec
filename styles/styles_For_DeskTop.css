@@ -16,7 +16,6 @@
 
     main {
         height: 100%;
-        overflow: hidden;
         overflow-y: auto;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -255,23 +254,25 @@
     }
 
     .Grade_curricular {
+        width: 100%;
         margin-top: 50px;
         padding-top: 50px;
         padding-bottom: 50px;
-        padding-left: 10%;
-        padding-right: 10%;
         background-color: #00000044;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .infor_curso {
         position: relative;
         display: flex;
-        width: 100%;
         justify-content: center;
         border: 1px solid #fff;
-        padding-top: 20px;
-        padding-bottom: 20px;
         border-radius: 10px;
+        height: 300px;
+        min-width: 600px;
+        margin-right: 40px;
     }
 
     .in2 div {
@@ -279,9 +280,22 @@
         align-items: center;
     }
 
+    .in2 div p {
+        font-size: 15px;
+    }
+
+    .in2 {
+        margin-top: 20px;
+    }
+
     .in2 div i {
+        font-size: 25px;
+        margin-bottom: 0;
         margin-right: 20px;
-        font-size: 30px;
+    }
+
+    .voltar_ant {
+        display: none;
     }
 
     .dv_info {
@@ -307,14 +321,37 @@
         position: relative;
         display: flex;
         justify-content: center;
-        margin-top: 150px;
-        width: 100%;
         height: 300px;
         border: 1px solid #fff;
         border-radius: 10px;
         display: flex;
         background-color: #95a8b67e;
+        min-width: 600px;
 
+    }
+
+    @media (max-width: 1585px) {
+        .Grade_curricular {
+            width: 100%;
+            margin-top: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: #00000044;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .infor_curso {
+            width: 60%;
+        }
+
+        .grade-prin {
+            width: 60%;
+            margin-left: -40px;
+            margin-top: 100px;
+        }
     }
 
     .bols {
@@ -430,13 +467,118 @@
         margin-bottom: 2px;
     }
 
+    .frases {
+        position: relative;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        height: 80px;
+        border-radius: 5px;
+        border: solid 1px #00ffd5;
+        background-clip: padding-box;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        background: linear-gradient(100deg, #00ffd5b7, #0011ff, #00ffd5b7);
+        background-size: 200% 50%;
+        animation: movi 6s linear infinite;
+    }
+
+    .frases-title {
+        position: absolute;
+        top: -20px;
+        width: 200px;
+        height: 30px;
+        background-color: #001c2b;
+        border: 1px solid #00ffd5;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes movi {
+        0% {
+            background-position: 0% 100%;
+        }
+
+        100% {
+            background-position: 200% 100%;
+        }
+    }
+
+    .frases div p {
+        color: #ffffff;
+    }
+
+    .perguntas001 {
+        background-color: #376e8b46;
+        border-top: solid 1px #fff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .perguntas001 div h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #00aeff;
+    }
+
+    .details {
+        border-bottom: 1px solid #ffffff3a;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .details div {
+        width: 100%;
+    }
+
+    .details summary strong {
+        color: #ffffff;
+        text-align: justify;
+    }
+
+    .details p {
+        color: #ffffff;
+        text-align: justify;
+        opacity: 0.8;
+        padding-top: 5px;
+    }
+
+    summary {
+        cursor: pointer;
+        text-align: justify;
+    }
+
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    summary::before {
+        content: "▶ ";
+        font-size: 15px;
+        color: #00f8d7;
+    }
+
+    details[open] summary::before {
+        content: "▼ ";
+    }
+
 
 
 
     footer {
         background-color: #03060f;
         height: 190px;
-        margin-top: 400px;
     }
 
     .div_rs {
@@ -517,6 +659,106 @@
 
     .copy {
         opacity: 0.8;
+        line-height: 1px;
+    }
+
+    .results {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #results div h3 {
+        text-align: center;
+        color: #ff9100;
+    }
+
+    .varrr {
+        height: 80%;
+        width: 100%;
+        display: flex;
+    }
+
+    .the_process_prin {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .the_process1,
+    .the_process2,
+    .the_process3 {
+        width: 10px;
+        height: 10px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        animation: mudarOpacidade 2 infinite;
+        border: 1px solid #fff;
+    }
+
+    .the_process1 {
+        background-color: #00b7ff;
+        animation: mudarOpacidade1 2s infinite;
+    }
+
+    .the_process2 {
+        background-color: #00b7ff;
+        animation: mudarOpacidade2 2s infinite;
+    }
+
+    .the_process3 {
+        background-color: #00b7ff;
+        animation: mudarOpacidade3 2s infinite;
+    }
+
+    @keyframes mudarOpacidade1 {
+        0% {
+            opacity: 1;
+        }
+
+        30% {
+            opacity: 0;
+        }
+
+        70% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes mudarOpacidade2 {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        80% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes mudarOpacidade3 {
+        0% {
+            opacity: 1;
+        }
+
+        70% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: 1;
+        }
+    }
+
+
+
+    .the_process_prin div:not(:last-child) {
+        margin-right: 5px;
     }
 
 

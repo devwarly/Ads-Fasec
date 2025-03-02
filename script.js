@@ -369,7 +369,7 @@ document.querySelector('.periodos').addEventListener('click', (event) => {
 
 document.querySelectorAll('[data-aos]').forEach(function(element) {
     if (window.innerWidth >= 800) {
-        element.removeAttribute('data-aos'); // Remove o atributo data-aos para telas maiores
+        element.removeAttribute('data-aos');
     }
 });
 
