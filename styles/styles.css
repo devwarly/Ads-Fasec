@@ -971,7 +971,6 @@
     }
 
     .nosso_instagram {
-        width: 350px;
         height: 40px;
         text-align: center;
         display: flex;
@@ -979,6 +978,7 @@
         justify-content: space-between;
         align-items: center;
         border-radius: 10px 10px 0px 0px;
+        border-bottom: 1px solid #ffffff34;
     }
 
     .space {
@@ -1008,17 +1008,18 @@
 
     .insta {
         background-color: #052e44;
+        border-radius: 10px;
         position: relative;
     }
 
     .confiraa {
-        width: 350px;
         height: 40px;
         background-color: #001724;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 0px 0px 10px 10px;
+        border-top: 1px solid #ffffff34;
     }
 
     .confiraa a {
