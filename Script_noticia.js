@@ -20,7 +20,7 @@ botao2.addEventListener('click', () => {
     if (conteudo2.classList.contains('novo-conteudo')) {
         conteudo2.classList.remove('novo-conteudo');
         conteudo2.style.height = '250px'; // Altura inicial para conteúdo "fechado"
-        botao.textContent = '🔻Ler Mais';
+        botao2.textContent = '🔻Ler Mais';
     } else {
         conteudo2.classList.add('novo-conteudo');
         conteudo2.style.height = 'auto'; // Ajusta para mostrar todo o conteúdo
