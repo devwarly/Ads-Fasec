@@ -476,9 +476,141 @@
         margin-bottom: 2px;
     }
 
+    .nosso_instagram_prin {
+        margin-top: 80px;
+        margin-bottom: 50px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .instaaa {
+        width: 500px;
+    }
+
+    .insta_top_cont {
+        background-color: #001724;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .insta_top_cont_info {
+        height: 40%;
+        display: flex;
+    }
+
+    .insta-img-logo {
+        transform: translateY(20%);
+        width: 60px;
+        height: 60px;
+        padding: 2px;
+        background: linear-gradient(135deg, #8004b1, #ffa600, #8004b1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #126383;
+        overflow: hidden;
+    }
+
+    .insta-img-logo img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .nomes-cont {
+        flex: 1;
+        margin-left: 10px;
+    }
+
+    .nome_ads {
+        font-weight: 500;
+    }
+
+    .link_ads {
+        opacity: 0.7;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    .info-seguidores {
+        flex: 1;
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .info-seguidores div {
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+    }
+
+    .info-seguidores div:not(:last-child) {
+        margin-right: 5%;
+    }
+
+    .info-seguidores div p {
+        font-size: 14px;
+    }
+
+    .info-seguidores div p span {
+        opacity: 0.5;
+        font-size: 12px;
+    }
+
+    .seguir-insta {
+        margin-top: 10px;
+    }
+
+    .seguir-insta a button {
+        background-color: #00aeff;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .seguir-insta a button:active {
+        opacity: 0.5;
+        padding: 9px;
+    }
+
+    .seguir-insta a button:hover {
+        opacity: 0.5;
+        padding: 9px;
+    }
+
+
+    .seguir-insta a button i {
+        margin-right: 10px;
+    }
+
+    .posts-instagram {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 5px;
+        background-color: #052e44;
+    }
+
+    .posts-instagram div {     
+        width: 100%;
+    }
+
+    .posts-instagram div img {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+       
+    }
+
     .nosso_instagram_sec {
-        margin-top: 100px;
-        margin-bottom: 150px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -520,11 +652,7 @@
         font-size: 20px;
     }
 
-    .insta {
-        background-color: #052e44;
-        border-radius: 10px;
-        position: relative;
-    }
+  
 
     .confiraa {
         height: 40px;
@@ -534,26 +662,6 @@
         align-items: center;
         border-radius: 0px 0px 10px 10px;
         border-top: 1px solid #ffffff34;
-    }
-
-    .confiraa a {
-        height: 30px;
-        border: solid 1px #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 5px;
-        padding-right: 5px;
-        background-color: #145eff;
-        border-radius: 5px;
-    }
-
-    .confiraa a:hover {
-        opacity: 0.5;
-    }
-
-    .confiraa a i {
-        margin-left: 5px;
     }
 
     .frases {
