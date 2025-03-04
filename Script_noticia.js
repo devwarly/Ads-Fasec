@@ -42,3 +42,4 @@ botao3.addEventListener('click', () => {
         botao3.textContent = '🔺Ler Menos';
     }
 });
+

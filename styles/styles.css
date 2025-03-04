@@ -966,7 +966,7 @@
     .nosso_instagram_prin {
         padding-left: 5%;
         padding-right: 5%;
-        margin-bottom: 50px;
+        margin-bottom: 200px;
         font-size: 1rem;
     }
 
@@ -1066,6 +1066,7 @@
     }
 
     .posts-instagram {
+        position: relative;
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -1081,6 +1082,34 @@
         width: 100%;
         height: 100%;
        
+    }
+
+    .info-pos1 {
+        position: absolute;
+        overflow: hidden;
+        height: auto;
+        background-color: #ffffff;
+        transform: translateY(-230px);
+        padding-top: 30px;
+        display: none;
+    }
+
+    .fechar-post {
+        position: absolute;    
+        background-color: #3b3b3b;
+        margin-top: -30px;
+        text-align: center;
+        padding: 5px;
+        color: #00ffd5;
+    }
+
+    .fechar-post:active {
+        opacity: 0.5;
+    }
+
+    .fechar-post i {
+        margin-right: 10px;
+        color: #00ffd5;
     }
 
     .nosso_instagram_sec {

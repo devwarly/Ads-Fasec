@@ -373,6 +373,16 @@ document.querySelectorAll('[data-aos]').forEach(function(element) {
     }
 });
 
+function fecharpost() {
+    const infoPos1 = document.getElementById('info-pos1')
+
+    if (infoPos1.style.display === 'none' || nav_list.style.display === '') {
+        infoPos1.style.display = 'flex'
+    } else {
+        infoPos1.style.display = 'none'
+    }
+}
+
 
 window.onload = function () {
     document.getElementById('nav_list').style.display = 'none';
