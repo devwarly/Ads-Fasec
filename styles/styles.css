@@ -602,7 +602,7 @@
         overflow: hidden;
         width: 95%;
         max-width: 600px;
-        top: 80px;
+        top: 100px;
         margin: auto;
     }
 
@@ -966,7 +966,6 @@
     .nosso_instagram_prin {
         padding-left: 5%;
         padding-right: 5%;
-        margin-bottom: 200px;
         font-size: 1rem;
     }
 
@@ -1076,6 +1075,7 @@
 
     .posts-instagram div {     
         width: 100%;
+        cursor: pointer;
     }
 
     .posts-instagram div img {
@@ -1101,6 +1101,7 @@
         text-align: center;
         padding: 5px;
         color: #00ffd5;
+        cursor: pointer;
     }
 
     .fechar-post:active {
@@ -1169,6 +1170,7 @@
 
 
     .frases {
+        position: relative;
         margin-left: 20px;
         margin-right: 20px;
         padding-left: 20px;
@@ -1192,6 +1194,7 @@
     .frases-title {
         position: absolute;
         top: -20px;
+        z-index: 1000;
         width: 200px;
         height: 30px;
         background-color: #001c2b;
