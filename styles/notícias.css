@@ -1,20 +1,110 @@
+
 .noticia {
-    background: #8300fd;
-    margin: 20px;
+    background: #083d5c;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-height: 400px;
-    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    transition: all 0.1s ease;
+    border: solid 1px #ffffff73;
+    border-radius: 5px;
 }
-
 
 #noticia001 {
-    margin-top: 90px;
+    margin-top: 50px;
 }
+
+
+@media (max-width: 800px) {
+    #noticia001 {
+        margin-top: 90px;
+    }
+
+    .noticia {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .titulo-imagem img {
+        width: 200px;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+
+}
+
+
+.conteudo {
+    max-height: 180px;
+
+    overflow: hidden;
+    transition: max-height 1s ease;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.novo-conteudo {
+    max-height: 2000px;
+
+}
+
+.conteudo2 {
+    max-height: 180px;
+
+    overflow: hidden;
+    transition: max-height 1s ease;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.conteudo3 {
+    max-height: 180px;
+
+    overflow: hidden;
+    transition: max-height 1s ease;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+
+
+#lermais {
+    width: 100%;
+    bottom: 5px;
+    height: 30px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+#lermais div {
+    text-align: center;
+    color: black;
+    background-color: #fdad00;
+    border-radius: 5px;
+    width: 120px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#lermais div:active {
+    opacity: 0.5;
+}
+
+#lermais div:hover {
+    background-color: #fbbf33;
+}
+
+
 
 .titulo-imagem {
     flex: 1;
@@ -26,13 +116,15 @@
 .titulo-imagem h2 {
     margin: 0;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-.titulo-imagem img {
-    width: 100px;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+@media (min-width: 801px) {
+    .titulo-imagem img {
+        height: 300px;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
 }
 
 .titulo-imagem p {
@@ -40,27 +132,8 @@
     font-size: 12px;
 }
 
+
 .conteudo {
     flex: 2;
     padding: 20px;
-}
-
-.conteudo p {
-    text-align: justify;
-}
-
-@media (min-width: 801px) {
-    .noticia {
-        margin-left: 10%;
-        margin-right: 10%;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .titulo-imagem img {
-        width: 200px;
-        border-radius: 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
 }
