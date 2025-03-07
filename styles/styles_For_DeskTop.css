@@ -477,8 +477,8 @@
     }
 
     .nosso_instagram_prin {
-        margin-bottom: 80px;
-        margin-top: 80px;
+        margin-bottom: 60px;
+        margin-top: 60px;
         font-size: 1rem;
         display: flex;
         justify-content: center;
@@ -486,6 +486,7 @@
 
     .instaaa {
         width: 500px;
+        scale: 0.8;
     }
 
     .insta_top_cont {
