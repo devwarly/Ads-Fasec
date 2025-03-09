@@ -578,7 +578,6 @@
 
     .seguir-insta a button:active {
         opacity: 0.5;
-        padding: 9px;
     }
 
     .seguir-insta a button:hover {

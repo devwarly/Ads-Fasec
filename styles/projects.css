@@ -1,0 +1,79 @@
+.projects {
+    background-color: rgba(42, 250, 181, 0.192);
+    padding: 50px 10% 50px 10%;
+    display: flex;
+    min-width: 200px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.project1, .project2 {                                                                 
+    margin-bottom: 10px;
+    background-color: rgb(19, 255, 255);
+    display: grid;
+    text-align: center;
+    padding: 10px;
+}
+
+.project1 div:not(:last-child), .project2 div:not(:last-child) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blueviolet;
+}
+
+.infoss-project {
+    width: 100%;
+}
+
+.title-project {
+    background-color: aquamarine;
+    width: 70%;
+}
+
+.the-pc-info {
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 800px) {
+    .projects {
+        padding: 20% 20px 0px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project1, .project2 {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .project1 div:not(:last-child), .project2 div:not(:last-child) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: blueviolet;
+    }
+
+    .project1 img {
+        background-color: rgb(255, 0, 85);
+
+    }
+
+    .infoss-project {
+        width: 100%;
+    }
+    
+    .title-project {
+        background-color: aquamarine;
+    }
+    
+    .the-pc-info {
+        display: flex;
+        justify-content: center;
+    }
+
+}
