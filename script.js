@@ -383,6 +383,25 @@ function fecharpost() {
     }
 }
 
+function div_alternativa() {
+    const div_alternativa = document.getElementById("div_alternativa");
+
+    if (div_alternativa.style.display === 'none' || div_alternativa.style.display === ''){
+        div_alternativa.style.display = 'flex'
+    } else {
+        div_alternativa.style.display = 'none'
+    }
+}
+function div_alternativa2() {
+    const div_alternativa2 = document.getElementById("div_alternativa2");
+
+    if (div_alternativa2.style.display === 'none' || div_alternativa2.style.display === ''){
+        div_alternativa2.style.display = 'flex'
+    } else {
+        div_alternativa2.style.display = 'none'
+    }
+}
+
 
 window.onload = function () {
     document.getElementById('nav_list').style.display = 'none';

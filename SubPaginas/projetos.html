@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body>
+<body class="body_projects">
     <main>
         <header class="cabecalho" id="cab1">
 
@@ -77,7 +77,7 @@
                 </div>
             </div>
 
-            
+
             <div class="pesqui">
                 <div onclick="limp_text2()" class="excluir-x2" id="limp_text2">
                     <i class="bi bi-x">
@@ -131,29 +131,38 @@
             <div class="project1">
                 <div class="infoss-project">
                     <div class="the-pc-info">
-                        <img src="" alt="img1">
+                        <img src="../imagens/cartilha.png" alt="img1">
                     </div>
                     <div class="title-project">
-                        <h1>Projeto1</h1>
+                        <h1>Alunos de Ads elaboram cartilha informativa sobre os resíduos eletrônicos</h1>
                     </div>
                 </div>
                 <div class="text_project">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia rerum nesciunt nihil quia eius libero iure accusamus eum provident incidunt, voluptatibus sequi quasi sapiente, voluptates suscipit corrupti eveniet delectus impedit?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia rerum nesciunt nihil quia eius
+                        libero iure accusamus eum provident incidunt, voluptatibus sequi quasi sapiente, voluptates
+                        suscipit corrupti eveniet delectus impedit?</p>
                 </div>
+
+                <button class="bt-vtp" onclick="div_alternativa()">Mais Informações<i class="bi bi-info-circle-fill"></i></button>
             </div>
 
             <div class="project2">
+
                 <div class="infoss-project">
                     <div class="the-pc-info">
-                        <img src="" alt="img1">
+                        <img src="../imagens/plano-de-abertura-do-arquiteto-de-colheita_23-2147710985.avif" alt="img1">
                     </div>
                     <div class="title-project">
                         <h1>Projeto1</h1>
                     </div>
                 </div>
                 <div class="text_project">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia rerum nesciunt nihil quia eius libero iure accusamus eum provident incidunt, voluptatibus sequi quasi sapiente, voluptates suscipit corrupti eveniet delectus impedit?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia rerum nesciunt nihil quia eius
+                        libero iure accusamus eum provident incidunt, voluptatibus sequi quasi sapiente, voluptates
+                        suscipit corrupti eveniet delectus impedit?</p>
                 </div>
+
+                <button class="bt-vtp" onclick="div_alternativa2()">Mais Informações<i class="bi bi-info-circle-fill"></i></button>
             </div>
         </section>
 
@@ -183,7 +192,20 @@
             <p class="copy">Copyright 2025 &copy; Desenvolvido por Paulo Henrique e Warly Martins</p>
         </footer>
 
+        <div class="div_alternativa" id="div_alternativa">
+            <button class="bt-vt" onclick="div_alternativa()">Voltar</button>
+            <div class="bt-pdf"><a  target="_blank" href="../Pdfs/Cartilha - Lixo Eletrônico.pdf" >Ver Cartilha<i class="bi bi-filetype-pdf"></i></a></div>
+        </div>
+        
+        <div class="div_alternativa" id="div_alternativa2">
+            <button class="bt-vt" onclick="div_alternativa2()">Voltar</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, eligendi esse, non hic reprehenderit
+                consequatur tempore iure laborum voluptas, quod exercitationem voluptatum animi dolorum facere similique
+                fugiat quos explicabo aliquid.</p>
+        </div>
+
     </main>
+
 
     <script src="../script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
